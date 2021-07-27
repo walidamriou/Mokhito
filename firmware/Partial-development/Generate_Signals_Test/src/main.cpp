@@ -37,22 +37,7 @@ void loop(){
   digitalWrite(LEDpin, HIGH);   // sets the LED on
   delayMicroseconds(Signal_Test_pulse_width);                  // waits for a second
   digitalWrite(LEDpin, LOW);    // sets the LED off
-  delayMicroseconds(80);  
-  delayMicroseconds(9000);  
-  delayMicroseconds(90000);  
-  delayMicroseconds(90000);  
-  delayMicroseconds(90000);  
-  delayMicroseconds(90000);  
-  delayMicroseconds(90000);  
-  delayMicroseconds(90000);  
-  delayMicroseconds(90000);  
-  delayMicroseconds(90000);  
-  delayMicroseconds(90000);  
-  delayMicroseconds(90000);  
-
-   
-  
-
+  delayMicroseconds(Signal_Test_pulse_space_222RPM);  
 }
 
 
