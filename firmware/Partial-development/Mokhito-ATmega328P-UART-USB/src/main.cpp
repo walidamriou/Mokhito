@@ -11,16 +11,14 @@
 
 #include <Arduino.h>
 
-uint16_t i=1;
+uint32_t i=7142; // 7142 for 1400 RPM and 10000000 for 1 RPM if poles is 6
 void setup() {
   Serial.begin(9600);
 }
 
 void loop() {
-  Serial.println(i);
-  i++;
-  if(i==1400){
-    i=1;
-  }
+  Serial.print(i);
+  Serial.print(",");
+  i--;
   delay(200);
 }
