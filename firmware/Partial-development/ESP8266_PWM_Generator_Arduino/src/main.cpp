@@ -16,10 +16,20 @@ uint8_t LEDpin = 5; //5
 
 void setup(){
   Serial.begin(115200);
-  analogWriteFreq(100);
-  analogWriteRange(255);
+    pinMode(LEDpin, OUTPUT);      // sets the digital pin as output
+
+  //analogWriteFreq(100);
+  //analogWriteRange(255);
 }
 
 void loop(){
-  analogWrite(LEDpin, 25);  /* set initial 10% duty cycle */
+  //analogWrite(LEDpin, 25);  /* set initial 10% duty cycle */
+  digitalWrite(LEDpin, HIGH);   // sets the LED on
+  delayMicroseconds(10);                  // waits for a second
+  digitalWrite(LEDpin, LOW);    // sets the LED off
+  delayMicroseconds(5990);   
+
 }
+
+
+ 
