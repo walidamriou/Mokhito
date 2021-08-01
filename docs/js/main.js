@@ -72,6 +72,9 @@ async function start() {
               datasend = 1 / datasend; // T to F
               datasend = datasend * 10; // RPM = F * 60 / 6 poles
               datasend = Math.floor(datasend); // remove after dot
+              if(datasend==1600){
+                datasend=0000;
+              }
               h1.innerHTML = datasend; // print value
               datasend = ""; // clear buffer
             }
