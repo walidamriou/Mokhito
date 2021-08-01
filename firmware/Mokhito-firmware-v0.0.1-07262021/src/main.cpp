@@ -23,6 +23,13 @@ void loop() {
   ontime = pulseIn(pin,HIGH);
   offtime = pulseIn(pin,LOW);
   period = ontime+offtime; 
+  if(period>10000000){
+    period=10000000;
+  }else if(period<5000)
+  {
+    period=6250;
+  }
+  
   Serial.print(period);
   Serial.println(",");
 }
